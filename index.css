@@ -1,0 +1,22 @@
+.tool {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+.tool .iconfont {
+    font-size: 24px;
+    transition: all 0.3s;
+    display: inline-block;
+    color: #aaaaaa;
+    padding: 0 15px;
+}
+
+.tool .active {
+    color: pink;
+    transform: scale(1.2);
+}
+
+body {
+    position: fixed;
+}
