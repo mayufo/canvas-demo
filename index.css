@@ -1,3 +1,7 @@
+ul {
+    padding: 0;
+    list-style: none;
+}
 .tool {
     position: absolute;
     top: 5px;
@@ -17,6 +21,58 @@
     transform: scale(1.2);
 }
 
+.pen-select {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+
+.color li {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    transition: all 0.3s;
+    border: 4px solid #ffffff;
+
+}
+.color #black {
+    background: #000000;
+}
+.color #red {
+    background: #FF1800;
+}
+
+.color #blue {
+    background: #04859D;
+}
+
+.color #yellow {
+    background: #FFB000;
+}
+
+.pen-select .active {
+   border: 4px solid pink;
+   transform: scale(0.8);
+}
+.size li {
+    width: 24px;
+    display: inline-block;
+    background: #aaaaaa;
+    margin-right: 15px;
+    border: 4px solid #ffffff;
+    transition: all 0.3s;
+}
+
+.size #thin {
+   height: 3px;
+}
+
+.size #thick {
+    height: 6px;
+}
 body {
     position: fixed;
 }

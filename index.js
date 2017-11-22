@@ -1,6 +1,9 @@
 var canvas = document.getElementById('canvas')
+var penSelect = document.getElementsByClassName('pen-select')[0]
 // var pen = document.getElementById('pen')
 var context = canvas.getContext('2d')
+
+
 
 var defaultWidth = 5
 var isUserEraser = false // 是否使用橡皮
@@ -19,7 +22,6 @@ window.onresize = function () {
 toUser(canvas)
 
 pen.onclick = function () {
-    console.log(1)
     isUserEraser = false
     pen.classList.add('active')
     eraser.classList.remove('active')
@@ -31,7 +33,54 @@ eraser.onclick = function () {
     pen.classList.remove('active')
 }
 
+black.onclick = function () {
+    context.fillStyle = 'black'
+    context.strokeStyle = 'black'
+    black.classList.add('active')
+    red.classList.remove('active')
+    yellow.classList.remove('active')
+    blue.classList.remove('active')
+}
 
+red.onclick = function () {
+    context.fillStyle = '#FF1800'
+    context.strokeStyle = '#FF1800'
+    red.classList.add('active')
+    black.classList.remove('active')
+    yellow.classList.remove('active')
+    blue.classList.remove('active')
+}
+
+yellow.onclick = function () {
+    context.fillStyle = '#FFB000'
+    context.strokeStyle = '#FFB000'
+    yellow.classList.add('active')
+    black.classList.remove('active')
+    red.classList.remove('active')
+    blue.classList.remove('active')
+}
+
+blue.onclick = function () {
+    context.fillStyle = '#04859D'
+    context.strokeStyle = '#04859D'
+    blue.classList.add('active')
+    black.classList.remove('active')
+    yellow.classList.remove('active')
+    red.classList.remove('active')
+}
+
+thin.onclick = function () {
+
+    defaultWidth = 5
+    thin.classList.add('active')
+    thick.classList.remove('active')
+}
+
+thick.onclick = function () {
+    defaultWidth = 10
+    thick.classList.add('active')
+    thin.classList.remove('active')
+}
 clear.onclick = function (){
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
