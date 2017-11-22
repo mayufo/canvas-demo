@@ -22,12 +22,14 @@ window.onresize = function () {
 toUser(canvas)
 
 pen.onclick = function () {
+    penSelect.style.display = 'block'
     isUserEraser = false
     pen.classList.add('active')
     eraser.classList.remove('active')
 }
 
 eraser.onclick = function () {
+    penSelect.style.display = 'none'
     isUserEraser = true
     eraser.classList.add('active')
     pen.classList.remove('active')
